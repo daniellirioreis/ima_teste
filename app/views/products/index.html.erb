@@ -1,0 +1,40 @@
+<h3>Produtos</h3>
+<table class="table table-striped table-hover table-bordered">
+  <colgroup>
+    <col>
+    <col width="160">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Categoria</th>
+      <th>Status</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @products.any? %>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product %></td>
+          <td><%= product.category %></td>
+          <td><%= product.status_humanize %></td>
+          <td align='center'>
+            <div class="btn-group">
+              <%= link_to "Editar", edit_product_path(product), :class => "btn btn-primary", :title => "Editar #{product}" %>
+              <%= link_to 'Deletar', product, method: :delete, data: { confirm: 'Confirma exclusão?'}, :class => "btn btn-danger" %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    <% else %>
+    <tr>
+      <td colspan='2'>Nenhum registro foi encontrado.</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to 'Novo Produto', new_product_path, :class => "btn" %>
+</p>

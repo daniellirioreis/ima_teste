@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      product:
+        one: "Produto"
+        other: "Produto"
+
+    attributes:
+      product:
+        name: 'Nome'
+        category_id: 'Categoria'
+        status: 'ativo/inativo'

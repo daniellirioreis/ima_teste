@@ -1,0 +1,11 @@
+<%= simple_form_for(@category) do |f| %>
+<div class="row-fluid">
+  <div class="span10">
+    <div class="span10"><%= f.input :name, input_html: { class: 'span10' } %></div>
+  </div>
+</div>
+<div class="form-actions">
+  <%= f.button :submit, :class => "btn btn-success" %>
+  <%= link_to 'Voltar', categories_path, :class => "btn"  %>
+</div>
+<% end %>
