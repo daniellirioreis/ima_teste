@@ -5,6 +5,7 @@ gem 'pg'
 gem 'foreigner'
 gem 'simple_form'
 gem 'responders', :git => 'https://github.com/plataformatec/responders.git'
+gem "active_model_serializers", "0.8.1"
 
 group :development, :test do
   gem 'rspec-rails'

@@ -1,0 +1,7 @@
+<h3>Detalhes do Produto</h3>
+<hr/>
+<b>Nome:</b> <%= @product%><br/>
+<b>Categoria:</b> <%= @product.category%><br/>
+<b>Status:</b> <%= @product.status_humanize %>
+<br/><br/>
+<%= link_to "Voltar", :back, :class => "btn"%>
