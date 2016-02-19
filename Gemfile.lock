@@ -47,11 +47,6 @@ GEM
     multi_json (1.11.2)
     pg (0.18.4-x86-mingw32)
     polyglot (0.3.5)
-    postgres-copy (1.0.0)
-      activerecord (>= 4.0)
-      pg (>= 0.17)
-      rails (>= 4.0)
-      responders
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -101,7 +96,6 @@ DEPENDENCIES
   has_scope
   minitest
   pg
-  postgres-copy
   rails (= 4.0.0)
   responders
   simple_form

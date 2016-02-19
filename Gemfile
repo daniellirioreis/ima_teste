@@ -11,5 +11,4 @@ gem 'responders'
 gem 'enumerate_it'
 gem 'has_scope'
 gem "active_model_serializers", "0.8.1"
-gem 'postgres-copy'
 
