@@ -1,4 +1,15 @@
 ImaTeste::Application.routes.draw do
+
+  resources :clients
+
+get "monitor/index"
+  
+resources :schedules
+
+  resources :vehicles
+
+  resources :technical_consultants
+
   get '/dashboard', :to => 'dashboard#index', :as => :dashboard
 
   resources :categories

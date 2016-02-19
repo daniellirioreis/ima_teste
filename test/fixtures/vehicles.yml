@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type_vehicle: MyString
+  description: MyText
+  license_plate: MyString
+
+two:
+  type_vehicle: MyString
+  description: MyText
+  license_plate: MyString

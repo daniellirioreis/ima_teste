@@ -1,0 +1,2 @@
+module TechnicalConsultantsHelper
+end

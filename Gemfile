@@ -1,20 +1,15 @@
 source 'https://rubygems.org'
+ruby '2.2.4'
 gem 'rails', '4.0.0'
-gem 'puma'
+
+#gem 'puma'
 gem 'pg'
+gem 'minitest'
 gem 'foreigner'
 gem 'simple_form'
-gem 'responders', :git => 'https://github.com/plataformatec/responders.git'
+gem 'responders'
+gem 'enumerate_it'
+gem 'has_scope'
 gem "active_model_serializers", "0.8.1"
+gem 'postgres-copy'
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'shoulda-matchers', '2.1.0'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'factory_girl'
-  gem 'poltergeist'
-  gem 'turnip'
-end

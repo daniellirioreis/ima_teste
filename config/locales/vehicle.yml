@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      vehicle:
+        one: "Veículo"
+        other: "Veículos"
+
+    attributes:
+      vehicle:
+        type_vehicle: 'modelo'
+        license_plate: 'Placa'
+        description: 'Descrição'
+        client_id: 'Cliente'

@@ -1,0 +1,1 @@
+pt-BR:  activerecord:    models:      technical_consultant:        one: "Consultor Técnico"        other: "Consultores Técnicos"    attributes:      technical_consultant:        name: 'Nome'        cod: 'Codigo'

@@ -1,0 +1,15 @@
+pt-BR:
+  activerecord:
+    models:
+      schedule:
+        one: "Agendamento"
+        other: "Agendamentos"
+
+    attributes:
+      schedule:
+        vehicle_id: 'Veículo'
+        technical_consultant_id: 'Consultor Tecnico'
+        description_service: 'Descrição do serviço' 
+        hour_schedule: 'Hora' 
+        date_schedule: 'Data' 
+

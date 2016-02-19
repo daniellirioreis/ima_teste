@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Ima Teste" %></title>
+    <title>VEMINAS</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag :application, :media => 'all' %>
@@ -14,17 +14,22 @@
     <%= render 'layouts/header'%>
     <div class="container-fluid">
       <div class="row-fluid">
+				 <% unless params['controller'] == 'monitor'%>
          <div class="span2">
              <%= render 'layouts/menus' %>
          </div>
-        <div class="span9">
+				<% end %>
+				 
+											
+        <div class="<% if params['controller'] == 'monitor'%>span20<%else%>span9<%end%>">
+					<%= render 'layouts/messages' %>
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
       </div>
       <footer>
         <hr/>
-        <p>&copy; Workup</p>
+        <p></p>
       </footer>
     </div>
   </body>

@@ -1,0 +1,1 @@
+pt-BR:  activerecord:    models:      client:        one: "Cliente"        other: "Clientes"    attributes:      client:        name: 'Nome'        phone: 'Telefone'        cel_phone: 'Celular'

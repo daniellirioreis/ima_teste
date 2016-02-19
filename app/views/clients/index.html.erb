@@ -1,0 +1,46 @@
+  <h3>Listagem de Clientes</h3>
+  <table class="table table-striped table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th  width="10%">Email</th>
+        <th  width="10%">Telefone</th>
+        <th  width="10%">Celular</th>
+        <th  width="10%">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @clients.any? %>
+        <% @clients.each do |c| %>
+          <tr>
+            <td>
+							<%= c %>
+						</td>
+						<td>
+							<%= c.email %>
+						</td>
+						<td>
+							<%= c.phone %>
+						</td>
+						<td>
+							<%= c.cel_phone %>
+						</td>
+						<td>
+							 <div class="btn-group">
+                <%= link_to "Editar", edit_client_path(c), :class => "btn btn-primary", :title => "Editar #{c}" %>
+                <%= link_to 'Deletar', c, method: :delete, data: { confirm: 'Confirma exclusão?'}, :class => "btn btn-danger" %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      <% else %>
+      <tr>
+        <td colspan='5'>Nenhum registro foi encontrado.</td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<p>
+  <%= link_to 'Novo Cliente', new_client_path, :class => "btn" %>
+</p>
+

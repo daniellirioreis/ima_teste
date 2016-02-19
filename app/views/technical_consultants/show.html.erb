@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @technical_consultant.name %>
+</p>
+
+<p>
+  <strong>Cod:</strong>
+  <%= @technical_consultant.cod %>
+</p>
+
+<%= link_to 'Edit', edit_technical_consultant_path(@technical_consultant) %> |
+<%= link_to 'Back', technical_consultants_path %>

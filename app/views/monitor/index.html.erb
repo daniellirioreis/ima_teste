@@ -1,0 +1,25 @@
+<meta http-equiv="refresh" content="5;URL=/monitor/index">
+<h1 class="text-info text-center">Agendamentos</h1>
+ <table class="table">
+  <thead>
+    <tr>
+      <th>Hora</th>
+      <th>Placa</th>
+      <th>Cliente</th>
+      <th>Consultor</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schedules.each do |schedule| %>
+      <tr class="<%if schedule.hour_schedule.hour == Time.now.hour && schedule.hour_schedule.min == Time.now.min %>success<%end%>">
+        <td><%= schedule.hour_schedule.try(:strftime, '%H:%M') %></td>
+
+        <td><%= schedule.vehicle %></td>
+        <td><%= schedule.vehicle.client %></td>
+        <td><%= schedule.technical_consultant %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

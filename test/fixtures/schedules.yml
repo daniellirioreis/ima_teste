@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  vehicle_id: 
+  techinical_consultant_id: 
+  date_schedule: 2016-02-17
+  hour_schedule: 2016-02-17 15:22:17
+  description_service: MyText
+
+two:
+  vehicle_id: 
+  techinical_consultant_id: 
+  date_schedule: 2016-02-17
+  hour_schedule: 2016-02-17 15:22:17
+  description_service: MyText
