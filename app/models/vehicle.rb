@@ -1,7 +1,7 @@
 class Vehicle < ActiveRecord::Base
 	belongs_to :client
 
-	validates :type_vehicle, :license_plate, presence: true
+	validates :type_vehicle, :license_plate, :client_id, presence: true
 	validates :license_plate, uniqueness: true
 
 	def	to_s
