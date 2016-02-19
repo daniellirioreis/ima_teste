@@ -13,4 +13,4 @@ gem 'has_scope'
 gem "active_model_serializers", "0.8.1"
 gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
 gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
-
+gem 'uglifier'
