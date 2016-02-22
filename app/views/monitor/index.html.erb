@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @schedules.each do |schedule| %>
+    <% @schedules.sorted.each do |schedule| %>
       <tr class="<%if schedule.hour_schedule.hour == (Time.now.hour - 2) && schedule.hour_schedule.min == Time.now.min %>success<%end%>">
         <td><%= schedule.hour_schedule.try(:strftime, '%H:%M') %></td>
 
