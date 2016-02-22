@@ -23,13 +23,13 @@ class VehiclesController < ApplicationController
   def create
     @vehicle = Vehicle.new(vehicle_params)
     @vehicle.save
-	respond_with @vehicle, :location => @vehicles_path
+	respond_with @vehicle, :location => vehicles_path
 
   end
 
   def update
     @vehicle.update(vehicle_params)
-	respond_with @vehicle, :location => @vehicles_path
+	respond_with @vehicle, :location => vehicles_path
   end
 
   def destroy
