@@ -1,5 +1,5 @@
 class MonitorController < ApplicationController
   def index
-		@schedules = Schedule.all
+		@schedules = Schedule.date_schedule_equal(Date.today)
   end
 end
