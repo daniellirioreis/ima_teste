@@ -1,0 +1,23 @@
+<a href="#myModal_<%= order_of_service.id%>" role="button" class="btn btn-info" data-toggle="modal">Ação</a>
+		<!-- Modal -->
+<div id="myModal_<%= order_of_service.id%>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Selecione o status da OS</h3>
+	</div>
+	<div class="modal-body">
+		<%= link_to "Próximo Serviço", exchange_status_order_of_service_path(order_of_service, status: StatusOs::NEXT_SERVICE), class: "btn btn-primary"%><br><br>
+		
+		<%= link_to "O.S Em Andamento", exchange_status_order_of_service_path(order_of_service, status: StatusOs::ORDER_IN_PROGRESS), class: "btn btn-primary"%><br><br>
+		
+		<%= link_to "Aguardando Aprovação", exchange_status_order_of_service_path(order_of_service, status: StatusOs::WAITING_FOR_APPROVAL), class: "btn btn-primary"%><br><br>
+		<%= link_to "Aguardando Peças", exchange_status_order_of_service_path(order_of_service, status: StatusOs::WAITING_FOR_PARTS), class: "btn btn-primary"%><br><br>
+		
+		<%= link_to "Aguardando Serviços de Terceiros", exchange_status_order_of_service_path(order_of_service, status: StatusOs::WAITING_FOR_THIRD_PARTY_SERVICES), class: "btn btn-primary"%><br><br>
+		
+		<%= link_to "Aguardando por Controle de Qualidade", exchange_status_order_of_service_path(order_of_service, status: StatusOs::WAITING_FOR_QUALITY_CONTROL), class: "btn btn-primary"%><br><br>
+		
+		<%= link_to "Agendamento", exchange_status_order_of_service_path(order_of_service, status: StatusOs::SCHEDULING), class: "btn btn-primary"%>		
+		
+	</div>
+</div>

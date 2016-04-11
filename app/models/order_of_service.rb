@@ -7,6 +7,7 @@ class OrderOfService < ActiveRecord::Base
   belongs_to :client
   belongs_to :productive
   has_enumeration_for :status_os, whith: StatusOs, create_helpers: true
-  validates :client_name, :technical_consultant_name, :productive_name, presence: true
+  scope :sorted, -> { order("number") }	
+  #validates :client_name, :technical_consultant_name, :productive_name, presence: true
 	
 end

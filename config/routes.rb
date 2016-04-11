@@ -1,6 +1,8 @@
 ImaTeste::Application.routes.draw do
 
-  resources :order_of_services
+  resources :order_of_services do 
+    get :exchange_status, on: :member        
+  end
 
   resources :productives do 
     get :autocomplete_productive_name, :on => :collection

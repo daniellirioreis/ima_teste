@@ -1,8 +1,13 @@
 class OrderOfServicesController < ApplicationController
-  before_action :set_order_of_service, only: [:show, :edit, :update, :destroy]
+  before_action :set_order_of_service, only: [:show, :edit, :update, :destroy, :exchange_status]
 
   respond_to :html
 
+  def exchange_status
+    @order_of_service.update_attributes(status_os: params[:status] )
+    redirect_to monitor_index_path
+  end
+  
   def index
     @order_of_services = OrderOfService.all
     respond_with(@order_of_services)
@@ -20,6 +25,8 @@ class OrderOfServicesController < ApplicationController
   def edit
     @order_of_service.client_name = @order_of_service.client.name
     @order_of_service.technical_consultant_name = @order_of_service.technical_consultant.name
+    @order_of_service.productive_name = @order_of_service.productive.name
+    
   end
 
   def create
