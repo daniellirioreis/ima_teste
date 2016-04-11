@@ -1,7 +1,7 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
-  respond_to :html, :js
-  autocomplete :client, :name, :display_value => :name do |items|
+  respond_to :html
+  autocomplete :client, :name, :display_value => :name, :extra_data => [ :email] do |items|
   respond_to do |format|
   format.json { render :json => @items }
       end

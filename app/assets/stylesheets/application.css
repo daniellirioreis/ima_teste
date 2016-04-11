@@ -12,5 +12,6 @@
  *= require bootstrap-overrides
  *= require bootstrap-responsive
  *= require font-awesome
+ *= require autocomplete
  *= require_self
  */

@@ -16,6 +16,9 @@
 //= require bootstrap-datepicker
 //= require bootstrap-datepicker.min
 //= require bootstrap-datepicker.pt-BR.min
+
+
+
 $(function(){
     $(".input-search").keyup(function(){
         //pega o css da tabela
