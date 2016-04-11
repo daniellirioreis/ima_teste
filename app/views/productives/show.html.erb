@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Código:</strong>
+  <%= @productive.code %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @productive.name %>
+</p>
+
+<p>
+  <strong>Função:</strong>
+  <%= @productive.function %>
+</p>
+
+<%= link_to 'Editar', edit_productive_path(@productive),class: :btn %>
+<%= link_to 'Listagem de Produtivos', productives_path ,class: :btn%>

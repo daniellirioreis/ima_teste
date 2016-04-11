@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @order_of_service.number %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @order_of_service.client %>
+</p>
+
+<%= link_to 'Edit', edit_order_of_service_path(@order_of_service) %> |
+<%= link_to 'Back', order_of_services_path %>

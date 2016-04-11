@@ -1,0 +1,21 @@
+pt-BR:
+
+  activerecord:
+
+    models:
+
+      productive:
+
+        one: "Produtivo"
+
+        other: "Produtivos"
+
+
+
+    attributes:
+
+      productive:
+        name: 'Nome'
+        function: 'Função'
+        code: 'Código'
+

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
+ruby '2.1.8'
 gem 'rails', '4.0.0'
 
 #gem 'puma'
@@ -14,3 +14,5 @@ gem "active_model_serializers", "0.8.1"
 gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
 gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 gem 'uglifier'
+gem 'rails4-autocomplete'
+gem 'jquery-ui-rails'

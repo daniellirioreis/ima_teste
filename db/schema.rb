@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217182220) do
+ActiveRecord::Schema.define(version: 20160411125841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,23 @@ ActiveRecord::Schema.define(version: 20160217182220) do
     t.string   "email"
     t.string   "phone"
     t.string   "cel_phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_of_services", force: true do |t|
+    t.integer  "number"
+    t.integer  "client_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "order_of_services", ["client_id"], name: "index_order_of_services_on_client_id", using: :btree
+
+  create_table "productives", force: true do |t|
+    t.integer  "code"
+    t.string   "name"
+    t.string   "function"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

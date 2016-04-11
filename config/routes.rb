@@ -1,6 +1,12 @@
 ImaTeste::Application.routes.draw do
 
-  resources :clients
+  resources :order_of_services
+
+  resources :productives
+
+  resources :clients do 
+    get :autocomplete_client_name, :on => :collection
+  end
 
 get "monitor/index"
   
