@@ -195,6 +195,11 @@ DEPENDENCIES
   jquery-ui-rails
   pg (~> 0.15)
   rails (= 4.2.5.1)
+  jquery-ui-rails
+  minitest
+  pg
+  rails (= 4.0.0)
+  rails3_serve_static_assets!
   rails4-autocomplete
   rails_12factor
   responders
