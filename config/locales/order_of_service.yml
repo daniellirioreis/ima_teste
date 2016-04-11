@@ -16,5 +16,5 @@ pt-BR:
 
       order_of_service:
         number: 'Número'
-        client: 'Cliente'
-
+        client_name: 'Cliente'
+        technical_consultant_name: "Consultor"

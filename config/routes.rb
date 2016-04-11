@@ -7,15 +7,17 @@ ImaTeste::Application.routes.draw do
   resources :clients do 
     get :autocomplete_client_name, :on => :collection
   end
-
-get "monitor/index"
   
-resources :schedules
+  resources :technical_consultants do 
+    get :autocomplete_technical_consultant_name, :on => :collection
+  end
+  
+  get "monitor/index"
+  
+  resources :schedules
 
   resources :vehicles
-
-  resources :technical_consultants
-
+  
   get '/dashboard', :to => 'dashboard#index', :as => :dashboard
 
   resources :categories

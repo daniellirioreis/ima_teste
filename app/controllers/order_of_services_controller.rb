@@ -18,7 +18,8 @@ class OrderOfServicesController < ApplicationController
   end
 
   def edit
-  #  @order_of_service.client_name = @order_of_service.client.name
+    @order_of_service.client_name = @order_of_service.client.name
+    @order_of_service.technical_consultant_name = @order_of_service.technical_consultant.name
   end
 
   def create
@@ -43,6 +44,6 @@ class OrderOfServicesController < ApplicationController
     end
 
     def order_of_service_params
-      params.require(:order_of_service).permit(:number, :client_id, :client_name)
+      params.require(:order_of_service).permit(:number, :client_id, :client_name, :technical_consultant_name, :technical_consultant_id)
     end
 end

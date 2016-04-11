@@ -3,6 +3,12 @@ class TechnicalConsultantsController < ApplicationController
 
   respond_to :html
 
+  autocomplete :technical_consultant, :name, :display_value => :name, :extra_data => [] do |items|
+    respond_to do |format|
+      format.json { render :json => @items }
+    end
+  end
+
   def index
     @technical_consultants = TechnicalConsultant.sorted
     respond_with(@technical_consultants)

@@ -1,24 +1,25 @@
 <table class="table">
   <td><h3>Listagem de Ordens de Serviços</h3></td>
-  <td width='5%'>
-    <%= link_to new_order_of_service_path, role: 'button' do %>
-      <h2 class="text-success" title='Novo Produtivo'><i class="icon-plus"></i></h2>
-    <% end %>    
+  <td width='10%'>
+    <%= link_to "Nova OS", new_order_of_service_path , class: "btn btn-success" %>    
   </td>
 </table>
 <table class="table">
   <thead>
     <tr>
-      <th width= "5%">Número</th>
-      <th width= "5%">Cliente</th>
-    </tr>
+      <th width= "">Número</th>
+      <th width= "">Cliente</th>
+ 			<th width= "">Consultor</th>     
+ 			<th width= "5%"></th>     
+   </tr>
   </thead>
 <tbody>
     <% @order_of_services.each do |order_of_service| %>
       <tr>
         <td><%= order_of_service.number %></td>
         <td><%= order_of_service.client %></td>      
-        <td>
+        <td><%= order_of_service.technical_consultant %></td>             	
+ 				<td>
           <div class="btn-group">
              <%= link_to "Editar", edit_order_of_service_path(order_of_service), :class => "btn btn-primary", :title => "Editar #{order_of_service}" %>
              <%= link_to 'Deletar', order_of_service, method: :delete, data: { confirm: 'Confirma exclusão?'}, :class => "btn btn-danger" %>
