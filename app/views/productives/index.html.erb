@@ -1,9 +1,7 @@
 <table class="table">
   <td><h3>Listagem de Produtivos</h3></td>
-  <td width='5%'>
-    <%= link_to new_productive_path, role: 'button' do %>
-      <h2 class="text-success" title='Novo Produtivo'><i class="icon-plus"></i></h2>
-    <% end %>    
+  <td width='10%'>
+    <%= link_to "Novo Produtivo", new_productive_path , class: "btn btn-success" %>    
   </td>
 </table>
 <table class="table">

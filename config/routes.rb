@@ -2,7 +2,9 @@ ImaTeste::Application.routes.draw do
 
   resources :order_of_services
 
-  resources :productives
+  resources :productives do 
+    get :autocomplete_productive_name, :on => :collection
+  end
 
   resources :clients do 
     get :autocomplete_client_name, :on => :collection

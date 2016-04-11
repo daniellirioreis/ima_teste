@@ -44,6 +44,6 @@ class OrderOfServicesController < ApplicationController
     end
 
     def order_of_service_params
-      params.require(:order_of_service).permit(:number, :client_id, :client_name, :technical_consultant_name, :technical_consultant_id)
+      params.require(:order_of_service).permit(:number, :client_id, :client_name, :technical_consultant_name, :technical_consultant_id, :status_os, :productive_id, :productive_name)
     end
 end

@@ -1,0 +1,10 @@
+pt-BR:
+  enumerations:
+    status_os:
+       next_service: "Próximo Serviço"
+       order_in_progress: "O.S Em Andamento"
+       waiting_for_approval: "Aguardando Aprovação"
+       waiting_for_parts: "Aguardando Peças"
+       waiting_for_third_party_services: "Aguardando Serviços de Terceiros"
+       waiting_for_quality_control: "Aguardando por Controle de Qualidade"
+       scheduling: "Agendamento"

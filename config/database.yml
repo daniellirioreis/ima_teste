@@ -7,5 +7,5 @@ development:
   <<: *default
   database: ima_development
   username: postgres
-  password: 120188
+  password: diegoh6
 

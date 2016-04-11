@@ -1,9 +1,10 @@
 <meta http-equiv="refresh" content="5;URL=/monitor/index">
-<h1 class="text-info text-center">Agendamentos</h1>
+<h1 class="text-info text-center">Controle de Processo de Trabalho</h1>
  <table class="table">
   <thead>
     <tr>
       <th>O.S</th>
+      <th>Cliente</th>
       <th>Consultor</th>
       <th>Produtivo</th>
       <th>Status</th>
@@ -11,13 +12,13 @@
   </thead>
 
   <tbody>
-    <% @schedules.sorted.each do |schedule| %>
-      <tr class="<%if schedule.hour_schedule.hour == (Time.now.hour - 3) && schedule.hour_schedule.min == Time.now.min %>success<%end%>">
-        <td><%= schedule.hour_schedule.try(:strftime, '%H:%M') %></td>
-
-        <td><%= schedule.vehicle %></td>
-        <td><%= schedule.vehicle.client %></td>
-        <td><%= schedule.technical_consultant %></td>
+    <% @order_of_services.each do |order_of_service| %>
+      <tr class="">
+        <td><%= order_of_service.number %></td>
+        <td><%= order_of_service.client %></td>
+        <td><%= order_of_service.technical_consultant %></td>
+        <td><%= order_of_service.productive %></td>
+        <td><%= order_of_service.status_os_humanize %></td>
       </tr>
     <% end %>
   </tbody>

@@ -4,6 +4,7 @@
     <div class="span8"><%= f.input :number, as: :string, input_html: { class: 'span4',  maxlength: 8 } %></div>
   </div>
 </div>
+
 <div class="row-fluid">
   <div class="span10">
     <div class="span7">
@@ -21,6 +22,21 @@
       <%= f.input :technical_consultant_name, :url => autocomplete_technical_consultant_name_technical_consultants_path, :as => :autocomplete , :id_element => '#order_of_service_technical_consultant_id', :placeholder => "Digite o nome do Consultor", :multiple => false, input_html: {class:'span7'} %>
 
     </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span10">
+    <div class="span7">
+      <%= f.input :productive_id, as: :hidden %>
+      <%= f.input :productive_name, :url => autocomplete_productive_name_productives_path, :as => :autocomplete , :id_element => '#order_of_service_productive_id', :placeholder => "Digite o nome do produtivo", :multiple => false, input_html: {class:'span7'} %>
+
+    </div>
+  </div>
+</div>
+
+<div class="row-fluid">
+  <div class="span10">
+    <div class="span8"><%= f.input :status_os, collection:  StatusOs, input_html: { class: 'span4',  maxlength: 8 } %></div>
   </div>
 </div>
 <div class="form-actions">

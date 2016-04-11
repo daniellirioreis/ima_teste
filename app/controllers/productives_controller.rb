@@ -3,6 +3,12 @@ class ProductivesController < ApplicationController
 
   respond_to :html
 
+    autocomplete :productive, :name, :display_value => :name do |items|
+    respond_to do |format|
+      format.json { render :json => @items }
+    end
+  end
+
   def index
     @productives = Productive.all
     respond_with(@productives)
