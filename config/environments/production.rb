@@ -78,4 +78,11 @@ ImaTeste::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 	config.assets.js_compressor = :uglifier
+	# Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
+  config.cache_classes = true
+  config.serve_static_assets = true
+  config.assets.compile = true
+  config.assets.digest = true
+  
 end

@@ -1,0 +1,18 @@
+<div class="btn-group">
+<%= link_to "Próximo Serviço", monitor_index_path(status: StatusOs::NEXT_SERVICE), class: "#{ params[:status] == '0' ? ' btn btn-info' : 'btn' }" %>
+
+<%= link_to "O.S Em Andamento", monitor_index_path( status: StatusOs::ORDER_IN_PROGRESS), class: "#{ params[:status] == '1' ? ' btn btn-info' : 'btn' }"%>
+
+<%= link_to "Aguardando Aprovação", monitor_index_path(status: StatusOs::WAITING_FOR_APPROVAL), class: "#{ params[:status] == '2' ? ' btn btn-info' : 'btn' }"%>
+	<%= link_to "Aguardando Peças", monitor_index_path(status: StatusOs::WAITING_FOR_PARTS), class: "#{ params[:status] == '3' ? ' btn btn-info' : 'btn' }"%>
+
+<%= link_to "Aguardando Serviços de Terceiros", monitor_index_path(status: StatusOs::WAITING_FOR_THIRD_PARTY_SERVICES), class: "#{ params[:status] == '4' ? ' btn btn-info' : 'btn' }"%>
+
+<%= link_to "Aguardando por Controle de Qualidade", monitor_index_path(status: StatusOs::WAITING_FOR_QUALITY_CONTROL), class: "#{ params[:status] == '5' ? ' btn btn-info' : 'btn' }"%>
+
+<%= link_to "Agendamento", monitor_index_path(status: StatusOs::SCHEDULING), class: "#{ params[:status] == '6' ? ' btn btn-info' : 'btn' }"%>		
+
+<%= link_to "Todas", monitor_index_path(status: ''), class: "#{ params[:status] == '' ? ' btn btn-info' : 'btn' }"%>		
+
+</div>
+<br><br>

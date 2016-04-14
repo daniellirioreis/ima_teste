@@ -1,5 +1,6 @@
 
 <h1 class="text-info text-center">Controle de Processo de Trabalho</h1>
+<%= render "filters"%>
 
 <%= label_tag 'txtBusca', 'Pesquisar' %>
 <%= text_field_tag 'txtBusca', '', :class => 'span11 input-search', :id => 'txtBusca',:placeholder => "Buscar nesta lista", :alt =>"list" %>
@@ -17,16 +18,25 @@
   </thead>
 
   <tbody>
-    <% @order_of_services.sorted.each do |order_of_service| %>
-      <tr class="">
-        <td><%= order_of_service.number %></td>
-        <td><%= order_of_service.client %></td>
-        <td><%= order_of_service.technical_consultant %></td>
-        <td><%= order_of_service.productive %></td>
-        <td><%= order_of_service.status_os_humanize %></td>
-      	<td> <%= render "action", order_of_service: order_of_service%>
-			 </td>
+		<%if  @order_of_services.any? %>
+			<% @order_of_services.sorted.each do |order_of_service| %>
+	      <tr>
+	        <td><%= order_of_service.number %></td>
+	        <td><%= order_of_service.client %></td>
+	        <td><%= order_of_service.technical_consultant %></td>
+	        <td><%= order_of_service.productive %></td>
+	        <td><%= order_of_service.status_os_humanize %></td>
+	      	<td> <%= render "action", order_of_service: order_of_service%></td>
+				</tr>
+	    <% end %>	    
+		<% else %>
+			<tr>
+				<td colspan="6">
+					<center>
+						Nenhum registro foi encontrado.					 
+					</center>
+				</td>
 			</tr>
-    <% end %>
+		<% end %>
   </tbody>
 </table>

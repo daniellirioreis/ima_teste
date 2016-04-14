@@ -9,3 +9,9 @@ development:
   username: postgres
   password: diegoh6
 
+production:
+  <<: *default
+  database: ima_development
+  username: postgres
+  password: 120188
+    

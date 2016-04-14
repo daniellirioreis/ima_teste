@@ -5,7 +5,7 @@ class OrderOfServicesController < ApplicationController
 
   def exchange_status
     @order_of_service.update_attributes(status_os: params[:status] )
-    redirect_to monitor_index_path
+    redirect_to monitor_index_path(status:"")
   end
   
   def index
